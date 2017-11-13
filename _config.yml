@@ -77,7 +77,7 @@ collections:
         output: true
         permalink: /wiki/:path/
 
-repository: mzlogin/mzlogin.github.io
+repository: alienxcn/alienxcn.github.io
 
 # ---------------- #
 #      Comments    #
@@ -88,20 +88,20 @@ comments_provider: gitalk
 # !!!Important!!! Please modify infos below to yours
 # https://disqus.com
 disqus:
-    username: mzlogin
+    username: alienxcn
 # https://imsun.net/posts/gitment-introduction/
 gitment:
-    owner: mzlogin
-    repo: blog-comments
+    owner: alienxcn
+    repo: blog-comment
     oauth:
-        client_id: d2e1cbbd298958076462
-        client_secret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
+        client_id: 8462e3bdcb48a8019dad
+        client_secret: 764a3eada97f51418814a4a2eed8389a1b79948a
 # https://github.com/gitalk/gitalk#install
 gitalk:
-    owner: mzlogin
-    repo: blog-comments
-    clientID: d2e1cbbd298958076462
-    clientSecret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
+    owner: alienxcn
+    repo: blog-comment
+    clientID: 8462e3bdcb48a8019dad
+    clientSecret: 764a3eada97f51418814a4a2eed8389a1b79948a
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : true
 
