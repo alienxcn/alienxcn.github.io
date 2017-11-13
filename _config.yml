@@ -89,19 +89,12 @@ comments_provider: gitalk
 # https://disqus.com
 disqus:
     username: alienxcn
-# https://imsun.net/posts/gitment-introduction/
-gitment:
-    owner: alienxcn
-    repo: blog-comment
-    oauth:
-        client_id: 8462e3bdcb48a8019dad
-        client_secret: 764a3eada97f51418814a4a2eed8389a1b79948a
 # https://github.com/gitalk/gitalk#install
 gitalk:
     owner: alienxcn
     repo: blog-comment
-    clientID: 8462e3bdcb48a8019dad
-    clientSecret: 764a3eada97f51418814a4a2eed8389a1b79948a
+    clientID: 10dc08eca88c7d25650e
+    clientSecret: c478fa876dc33cbca33e0cc25ac0a0d1e4f3427e
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : true
 
