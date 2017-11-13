@@ -2,12 +2,12 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: http://mazhuang.org
+url: http://alienx.cn
 date_format: "ordinal"
-title: 码志
-subtitle: "打码改变人生"
-description: "马壮的个人博客"
-keywords: 码志, Zhuang Ma, mzlogin, mazhuang
+title: 小神先生的博客
+subtitle: "网络空间安全研究"
+description: "小神先生的个人博客"
+keywords: 网络空间安全, 小神先生, alienx
 timezone: Asia/Shanghai
 encoding: "utf-8"
 side_bar_repo_limit: 5
@@ -15,12 +15,12 @@ side_bar_repo_limit: 5
 # ---------------- #
 #      Author      #
 # ---------------- #
-author: Zhuang Ma
-organization: zkh360.com
-organization_url: http://www.zkh360.com
-github_username: mzlogin
+author: 陆茂斌
+organization: alienx.cn
+organization_url: alienx.cn
+github_username: alienxcn
 location: Wuhan, China
-email: chumpma@gmail.com
+email: me@alienx.cn
 
 # ---------------- #
 #    Navigation    #
