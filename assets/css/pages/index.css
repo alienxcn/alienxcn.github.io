@@ -1,8 +1,13 @@
-.home .banner,
 .home .site-header {
-    background: #4183c4;
-    color: #fff
+    background: #FF9966;
+    color: blue;    
 }
+
+.home .banner {
+    background: #FF9966;
+    color: #fff;
+}
+
 
 .home .banner .collection-head {
     color: #fff;
