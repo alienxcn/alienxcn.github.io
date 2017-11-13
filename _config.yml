@@ -4,8 +4,8 @@
 baseurl:
 url: http://alienx.cn
 date_format: "ordinal"
-title: 小神先生的博客
-subtitle: "网络空间安全研究"
+title: 小神先生
+subtitle: "守正出奇"
 description: "小神先生的个人博客"
 keywords: 网络空间安全, 小神先生, alienx
 timezone: Asia/Shanghai
@@ -19,7 +19,7 @@ author: 陆茂斌
 organization: alienx.cn
 organization_url: alienx.cn
 github_username: alienxcn
-location: Wuhan, China
+location: 中国 广州
 email: me@alienx.cn
 
 # ---------------- #

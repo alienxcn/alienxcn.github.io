@@ -1,19 +1,20 @@
-- name: Software Engineer Keywords
+- name: 软件工程开发
   keywords:
-      - Java
-      - C++
+      - JavaScript
+      - C/C++
       - Python
-      - Design Patterns
+      - PHP
 
-- name: Mobile Developer Keywords
+- name: 移动前端开发
   keywords:
-      - Android
-      - Reverse Engineering
+      - Vue.js
+      - Vuex
+      - Vux
+      - Less
 
-- name: Windows Developer Keywords
+- name: 网络空间安全
   keywords:
-      - Win32 SDK
-      - DuiLib
-      - WTL
-      - COM
-      - WinDbg
+      - 经典密码学
+      - 计算病毒行为
+      - 无线网络安全
+      - Web安全

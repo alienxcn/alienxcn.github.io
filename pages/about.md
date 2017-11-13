@@ -1,16 +1,16 @@
 ---
 layout: page
 title: About
-description: 打码改变世界
-keywords: Zhuang Ma, 马壮
-comments: true
+description: 守正出奇
+keywords: 陆茂斌, 小神先生
+comments: false
 menu: 关于
 permalink: /about/
 ---
 
-我是陆茂斌。
+我是陆茂斌，专注于网络空间安全。
 
-仰慕「优雅编码的艺术」。
+遵守「知行合一，守正出奇」。
 
 坚信熟能生巧，努力改变人生。
 
@@ -20,7 +20,7 @@ permalink: /about/
 * {{ website.sitename }}：[@{{ website.name }}]({{ website.url }})
 {% endfor %}
 
-## Skill Keywords
+## 技能树
 
 {% for category in site.data.skills %}
 ### {{ category.name }}
