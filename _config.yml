@@ -101,7 +101,8 @@ gitalk:
     owner: alienxcn
     repo: blog-comments
     clientID: 6b8223f28abb7b60ab15
-    clientSecret: a6842d48a59df46024e0b28a24b0cf3
+    clientSecret: a6842d48a59df46024e0b28a24b0cfc568f6f2b3
+    
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : true
 
