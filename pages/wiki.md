@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Wiki
+title: 出错啦
 description: 人越学越觉得自己无知
 keywords: 维基, Wiki
 comments: false
@@ -8,7 +8,7 @@ menu: 维基
 permalink: /wiki/
 ---
 
-> 紧急抢修ing
+> 尚未开放0.o
 
 <ul class="listing">
 {% for wiki in site.wiki %}
