@@ -48,7 +48,7 @@ permalink: /about/
 
 十分喜欢捣腾服务器。
 
-持有alienx.cn、alienx.top域名。
+持有alienx.cn、alienx.top、alienx.me域名。
 
 使用```wireshark```进行网络审计与流量审计。
 
