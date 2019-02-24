@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: http://alienx.cn
+url: http://blog.alienx.cn
 date_format: "ordinal"
 title: 小神先生
 subtitle: "守正出奇"
@@ -16,8 +16,8 @@ side_bar_repo_limit: 5
 #      Author      #
 # ---------------- #
 author: 陆茂斌
-organization: alienx.cn
-organization_url: alienx.cn
+organization: blog.alienx.cn
+organization_url: blog.alienx.cn
 github_username: alienxcn
 location: 中国 广州
 email: me@alienx.cn
