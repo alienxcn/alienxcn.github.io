@@ -10,9 +10,9 @@ permalink: /about/
 
 ## whois
 
-陆茂斌，23岁，来自广东佛山。
+陆茂斌，23岁，来自广东顺德。
 
-坚持「知行合一，守正出奇」的原则。
+遵循「知行合一，守正出奇」的原则。
 
 ## 学历
 
@@ -21,17 +21,18 @@ permalink: /about/
 - 西安电子科技大学 网络与信息安全学院
     - 网络空间安全 工学硕士 <code style="color:#c7254e;background-color:#f9f2f4;">在读</code>
 
-## 研究方向
+## 科研
 
-- 无人机通信安全
-- 渗透测试与流量分析
+- PCAP Analysis Basics
+- <code style="color:#c7254e;background-color:#f9f2f4;">Cryptography</code> Batch Authentication Protocol
+- Blockchain and Ethereum
 
-## 实习履历
+## 经历
 
 - 2017年07月-2017年08月：
-    - 中国南方航空公司。
+    - 中国南方航空公司 电子商务部 实习生。
 - 2017年10月-2018年09月：
-    - 广东省建设信息中心。
+    - 广东省建设信息中心 总工室 实习生。
 
 ## 联系
 
