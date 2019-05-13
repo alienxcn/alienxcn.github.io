@@ -1,0 +1,182 @@
+---
+layout: post
+title: 测试
+categories: 
+description: 
+keywords: 
+---
+
+最近在阅读Batch Authentication Protocol相关的论文中发现，很多方案使用基于身份的数字签名算法。下面总结出两个最常见的签名算法。
+
+为了避免数学公式等描述上有偏差，对数学定义全部都是使用英文描述。
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+![](/images/ALGO/T11.png)
+
+## 预备知识
+
+1. Bilinear Pairing
+
+    $$(G_{1},*),(G_{2},*),(G_{T},*)$$ are three cyclic groups of the same prime order $$p$$. Let $$g_{1}$$ be a generator of $$G_{1}$$ and $$g_{2}$$ be a generator of $$G_{2}$$. e: $$G_{1} × G_{2} → G_{T}$$ is a bilinear map, which satisfies:
+
+    1. Bilinear: $$e(u^{a},v^{b}) = e(u,v)^{ab}$$ for all $$u ∈ G_{1}, v ∈ G_{2}$$ and $$a, b ∈ Z_{p}$$;
+
+    2. Non-degeneracy: $$e(g_{1}, g_{2})\neq1_{G_{T}}$$;
+
+    3. Admissible: the map $$e$$ is efficiently computable.
+
+2. Elliptic Curve Discrete Logarithm Problem
+
+    Given a point $$P$$ of order $$q$$ on an elliptic curve, and a point $$Q$$ on the same curve, the ECDLP problem is to determine the integer $$l,0\leq l\leq q−1$$,such that $$Q=lP$$.
+
+3. Computational Diffie-Hellman problem
+
+    Given two unknowns $$a, b ∈ Z_{q}$$, the CDH problem is given $$P,aP,bP ∈G$$,compute $$abP ∈G$$.
+
+## 方案一
+
+### 初始化
+生成一个基于椭圆曲线的双线性映射$$e:G_{1}×G_{1}→G_{T}$$，选择一个哈希函数$$H_{1}:\{0,1\}^{*}→Z_{q}$$，其中$$P$$是$$G_{1}$$的生成元。
+
+### 生成密钥
+选择随机数$$x$$以及随机椭圆曲线上的点$$Q$$:
+
+$$x∈Z_{q}$$
+
+$$Q∈G_{1}$$
+
+计算公钥$$PK$$以及私钥$$SK$$:
+
+$$PK=(xP,Q)$$
+
+$$SK=x$$
+
+### 签名
+对于消息$$m$$:
+
+$$m∈\{0,1\}^{*}$$
+
+选择随机数$$k$$:
+
+$$k∈Z_{p}$$
+
+计算：
+
+$$T=kP$$
+
+$$h=H_{1}(m,T)$$
+
+$$S=(x+hk)Q$$
+
+签名结果为：
+
+$$(T,S)$$
+
+### 检验
+对于签名：
+
+$$(T,S)$$
+
+检验下面等式是否成立：
+
+$$e(S,P)=e(xP+hT,Q)$$
+
+### 证明
+
+假设:
+
+$$Q=zP$$
+
+有：
+
+$$e(xP+hT,Q)\\=e(xP+hT,zP)\\=e(xP+hT,P)^{z}\\=e(z(xP+hT),P)\\=e(xQ+hkQ,P)\\=e((x+hk)Q,P)\\=e(S,P)$$
+
+## 方案二
+
+### 初始化
+生成一个基于椭圆曲线的双线性映射$$e:G_{1}×G_{1}→G_{T}$$，选择两个哈希函数$$H_{1}:\{0,1\}^{*}→Z_{q}$$，$$H_{2}:\{0,1\}^{*}→Z_{q}$$，其中$$P$$是$$G_{1}$$的生成元。
+
+选择一个随机数$$s∈Z_{q}$$，计算：
+
+$$P_{Pub}=sP$$
+
+$$s$$为私钥，其余可以公开的参数为：
+
+$$<q,G_{1},G_{T},e,P,P_{Pub},Q,Q^{'},H_{1},H_{2}>$$
+
+### 提取
+给定身份：
+
+$$ID∈\{0,1\}^{*}$$
+
+选择一个随机数$$k∈Z_{q}$$，计算：
+
+$$T_{ID}=kP$$
+
+计算：
+
+$$h=H_{1}(ID,T_{ID})$$
+
+$$S_{ID}=(s+hk)Q$$
+
+身份ID的私钥为
+
+$$(T_{ID},S_{ID}$$
+
+### 基于身份的签名
+
+给定私钥$$(T_{ID},S_{ID})$$以及消息$$M$$:
+
+选择一个随机数$$r∈Z_{q}$$，计算：
+
+$$U=rP$$
+
+计算：
+
+$$h^{'}=H_{2}(ID,M,T_{ID},U)$$
+
+$$V=h^{'}S_{ID}+rQ^{'}$$
+
+签名结果为:
+
+$$(T_{ID},U,V)$$
+
+### 基于身份的验证
+
+对于消息$$M$$的签名$$(T_{ID},U,V)$$，验证下面等式是否成立:
+
+$$e(V,P)=e(h^{'}\cdot [P_{Pub}+h\cdot T],Q)\cdot e(U,Q^{'})$$
+
+### 证明
+
+假设：
+
+$$Q=aP,Q^{'}=bP$$
+
+其中：
+
+$$e(h^{'}\cdot [P_{Pub}+h\cdot T],Q)\\=e(h^{'}\cdot [P_{Pub}+h\cdot T],aP)\\=e(h^{'}\cdot [P_{Pub}+h\cdot T],P)^{a}\\=e(h^{'}\cdot (sQ+hkQ),P)\\=e(h^{'}\cdot (s+hk)Q,P)\\=e(h^{'}\cdot S_{ID},P)$$
+
+$$e(U,Q^{'})\\=e(U,bP)\\=e(U,P)^{b}\\=e(r\cdot Q^{'},P)$$
+
+因此：
+
+$$e(h^{'}\cdot [P_{Pub}+h\cdot T],Q)\cdot e(U,Q^{'})\\=e(h^{'}\cdot S_{ID},P)\cdot e(r\cdot Q^{'},P)\\=e(h^{'}\cdot S_{ID}+r\cdot Q^{'},P)\\=e(V,P)$$
+
+## Batch Authentication Protocol
+
+基于上述两种数字签名方式可以衍生出批量认证算法，该内容后面继续补充。
+
+## 参考文献
+
+CPAS：An Efficient Conditional Privacy-Preserving Authentication Scheme for Vehicular Sensor Networks
+
+## 补充
+
+本文中使用<code style="color:#c7254e;background-color:#f9f2f4;">MathJax引擎</code>来渲染基于LaTeX的数学公式，方法是在MD文件中插入下列语句：
+
+```html
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+```
+
