@@ -11,10 +11,12 @@
   {% endfor %}
 
   {% for doc in site.documents %}
+  {% if doc.url != "/2019/05/12/SPE/" %}
     {
       "title"    : "{{ doc.title | escape }}",
       "category" : "{{ doc.categories[0] | xml_escape }}",
       "url"      : "{{ site.url }}{{ doc.url }}"
     } {% unless forloop.last %},{% endunless %}
+  {% endif %}
   {% endfor %}
 ]
