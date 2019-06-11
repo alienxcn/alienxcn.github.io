@@ -34,10 +34,6 @@ permalink: /about/
 - 2017年10月-2018年09月：
     - 广东省建设信息中心 总工室 实习生。
 
-## 联系
-
-me@alienx.cn
-
 <!--
 {% for website in site.data.social %}
 * {{ website.sitename }}：[@{{ website.name }}]({{ website.url }})
