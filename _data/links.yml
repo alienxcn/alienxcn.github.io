@@ -1,17 +1,15 @@
-- name: 喀秋莎系统
-  url: http://katyusha.ai/
-
-- name: 王一百
-  url: http://whanzhe.xyz/
-
-- name: envoy
+- name: envoy的博客
   url: http://envoy.ink/
 
-- name: ping1008
-  url: https://blog.ping1008.me/
-
-- name: goushi
+- name: goushi的博客
   url: https://goushi.me/
 
-- name: John He
+- name: John He的博客
   url: https://kefirlily.cn/
+
+- name: 西安电子科技大学 Tom实验室
+  url: https://www.saiin.com.cn
+
+- name: 华南师范大学 唯链区块链技术与应用联合实验室
+  url: https://clouddatalab.github.io
+

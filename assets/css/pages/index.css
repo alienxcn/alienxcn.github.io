@@ -1,11 +1,15 @@
 .home .site-header {
-    background: #FF9966;
+    background: #000033;
     color: blue;    
 }
 
 .home .banner {
     background: #FF9966;
     color: #fff;
+    background-image: url(../../../images/BC.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center center;
 }
 
 
