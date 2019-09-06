@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: http://alienx.cn
+url: https://www.alienx.cn
 date_format: "ordinal"
 title: 小神先生
 subtitle: "守正出奇"
@@ -16,10 +16,10 @@ side_bar_repo_limit: 5
 #      Author      #
 # ---------------- #
 author: 陆茂斌
-organization: alienx.cn
+organization: HTTPS网站
 organization_url: alienx.cn
 github_username: alienxcn
-location: 中国 广州
+location: 阿里云CDN全站加速
 email: me@alienx.cn
 
 # ---------------- #

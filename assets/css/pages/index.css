@@ -36,6 +36,13 @@
     color: #fff
 }
 
+.home .spea {
+    background: #FF9900;
+    color: #FFFFFF; 
+    border-radius: 5px;
+    padding: 4px 4px 4px 4px;
+}
+
 
 @media (max-width:50em) {
   .home .collapsed .icon-bar {
