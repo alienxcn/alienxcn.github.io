@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: http://blog.alienx.cn
+url: https://blog.alienx.cn
 date_format: "ordinal"
 title: 小神先生
 subtitle: "守正出奇"
