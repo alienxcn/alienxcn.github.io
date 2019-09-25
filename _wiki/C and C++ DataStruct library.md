@@ -193,3 +193,104 @@ int main(){
     return 0;
 }
 ```
+
+```c++
+#include <iostream>
+#include <queue>
+using namespace std;
+
+struct tmp1{
+    int x;
+    tmp1(int a){
+        x = a;
+    }
+    bool operator<(const tmp1& a) const{
+        return x < a.x;
+    }
+};
+
+struct tmp2{
+    bool operator() (tmp1 a, tmp1 b){
+        return a.x < b.x;
+    }
+};
+
+int main(){
+    tmp1 a(1);
+    tmp1 b(2);
+    tmp1 c(3);
+    priority_queue<tmp1> d;
+    d.push(b);
+    d.push(c);
+    d.push(a);
+    while(!d.empty()){
+        cout << d.top().x << endl;
+        d.pop();
+    }
+    cout << endl;
+
+    priority_queue<tmp1, vector<tmp1>, tmp2> f;
+    f.push(c);
+    f.push(b);
+    f.push(a);
+    while(!f.empty()){
+        cout << f.top().x << endl;
+        f.pop();
+    }
+    return 0;
+}
+```
+
+## set
+
+### 属性
+
+```c++
+set<int> sample;
+
+// 迭代器
+sample.begin();
+sample.rend();
+sample.end();
+sample.rbegin();
+
+// 清空元素
+sample.clear();
+
+// 判断为空
+sample.empty();
+
+// 返回set容器可能包含的元素最大个数
+sample.max_size();
+
+// 返回当前set容器中的元素个数
+sample.size();
+```
+
+### 样例
+
+```c++
+#include <iostream>
+#include <set>
+using namespace std;
+
+int main(){
+    set<int> s;
+    s.insert(1);
+    s.insert(2);
+    s.insert(3);
+    s.insert(1);
+    cout << s.size() << endl;
+    cout << s.max_size() << endl;
+    cout << *s.begin() << endl;
+    cout << *s.end() << endl;
+
+    for(set<int>::iterator i = s.begin(); i!=s.end(); i++){
+        cout << *i << " ";
+    }
+    cout << endl;
+
+    s.clear();
+    return 0;
+}
+```

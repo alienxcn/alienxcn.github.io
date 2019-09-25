@@ -1,19 +1,23 @@
 #include <iostream>
-#include <queue>
-#include <vector>
+#include <set>
 using namespace std;
 
 int main(){
-    priority_queue<pair<int, int> > a;
-    pair<int, int> p1(1, 2);
-    pair<int, int> p2(1, 3);
-    pair<int, int> p3(2, 5);
-    a.push(p1);
-    a.push(p2);
-    a.push(p3);
-    while(!a.empty()){
-        cout << a.top().first << " " << a.top().second << endl;
-        a.pop();
+    set<int> s;
+    s.insert(1);
+    s.insert(2);
+    s.insert(3);
+    s.insert(1);
+    cout << s.size() << endl;
+    cout << s.max_size() << endl;
+    cout << *s.begin() << endl;
+    cout << *s.end() << endl;
+
+    for(set<int>::iterator i = s.begin(); i!=s.end(); i++){
+        cout << *i << " ";
     }
+    cout << endl;
+
+    s.clear();
     return 0;
 }
