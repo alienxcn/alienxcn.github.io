@@ -294,3 +294,108 @@ int main(){
     return 0;
 }
 ```
+
+## Vector
+
+### 构造函数
+
+```c++
+// 创建一个存放int类型的容器
+vector<int> sample;
+
+// 创建指定空间大小的容器，或者是指定所有元素内容的容器
+vector<int> sample(int nSize);
+vector<int> sample(int nSize, const int& t);
+
+// 复制构造函数
+vector<int> sample(const vector<int>&);
+vector<int> sample(vector<int>::iterator begin, vector<int>::iterator end);
+sample.assign(vector<int>::iterator begin, vector<int>::iterator end);
+
+// 从数组中复制值
+int a[5] = {1,2,3,4,5};
+vector<int> sample(a, a+5);
+```
+
+### 方法
+
+```c++
+// 向容器尾部添加元素
+sample.push_back(const T& x);
+
+// 在it位置插入数据x
+sample.insert(iterator it, T& x);
+
+// 在it位置插入n个数据x
+sample.insert(iterator it, int n, T& x);
+
+// 在it位置插入一段区间[a,b)
+sample.insert(iterator it, const iterator a, const iterator b);
+
+// 删除位置it的值
+sample.erase(iterator it);
+
+// 删除一段区间[a,b)
+sample.erase(iterator a, iterator b);
+
+// 删除最后的元素
+sample.pop_back();
+
+// 清空容器
+sample.clear();
+
+// 交换
+sample.swap(vector<int>& a);
+```
+
+### 属性
+
+```c++
+// 返回位置it的元素的引用
+sample.at(int pos);
+
+// 返回首个元素的引用
+sample.front();
+
+// 返回尾部元素的引用
+sample.back();
+
+// 返回首个元素的迭代器
+sample.begin();
+
+// 返回容器结尾，最后一个元素的后一个迭代器
+sample.end();
+
+// 返回容器结尾的迭代器
+sample.rbegin();
+
+// 返回首元素前一个迭代器
+sample.rend();
+
+// 是否为空
+sample.empty();
+
+// 长度
+sample.size();
+```
+
+### 样例
+
+```c++
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main(){
+    int N = 5, M = 6;
+    vector<vector<int> > obj(N, vector<int>(M));
+    for(int i=0; i<obj.size(); i++){
+        for(int j=0; j<obj[0].size(); j++){
+            cout << obj[i][j] << " ";
+        }
+        cout << endl;
+    }
+    cout << endl;
+    return 0;
+}
+```
