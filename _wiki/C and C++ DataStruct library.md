@@ -241,7 +241,7 @@ int main(){
 }
 ```
 
-## set
+## Set
 
 ### 属性
 
@@ -257,6 +257,17 @@ sample.rbegin();
 // 清空元素
 sample.clear();
 
+// 删除元素
+sample.erase(iterator);
+sample.erase(iterator, iterator);
+sample.erase(key_value);
+
+// 查找元素，如果没找到返回end
+sample.find(key_value);
+
+// 插入元素
+sample.insert(key_value);
+
 // 判断为空
 sample.empty();
 
@@ -265,6 +276,9 @@ sample.max_size();
 
 // 返回当前set容器中的元素个数
 sample.size();
+
+// 返回元素在set容器中出现的次数，或者用来判断元素是否出现。
+sample.count();
 ```
 
 ### 样例
@@ -293,6 +307,71 @@ int main(){
     s.clear();
     return 0;
 }
+```
+
+```c++
+#include <iostream>
+#include <set>
+using namespace std;
+
+int main(){
+    set<int> s;
+    s.insert(1);
+    s.insert(2);
+    s.insert(1);
+    s.insert(3);
+    cout << s.count(1) << endl;
+    cout << s.count(4) << endl;
+    return 0;
+}
+```
+
+```c++
+#include <iostream>
+#include <set>
+using namespace std;
+
+int main(){
+    set<int> s;
+    set<int>::const_iterator iter;
+    set<int>::iterator first;
+    set<int>::iterator second;
+    for(int i=0; i<10; i++){
+        s.insert(i);
+    }
+    s.erase(s.begin());
+    first = s.begin();
+    second = s.begin();
+    second++;
+    second++;
+    s.erase(first, second);
+    s.erase(8);
+    for(iter = s.begin(); iter != s.end(); iter++){
+        cout << *iter << " ";
+    }
+    cout << endl;
+    // 4 5 6 7 9 10
+    return 0;
+}
+```
+
+```c++
+#include <iostream>
+#include <set>
+#include <string>
+using namespace std;
+
+struct Info{
+    string name;
+    float score;
+    bool operator < (const Info& a) const {
+        // score降序排序
+        return a.score < score;
+    }
+};
+
+set<Info> s;
+set<Info>::iterator it;
 ```
 
 ## Vector
@@ -396,6 +475,99 @@ int main(){
         cout << endl;
     }
     cout << endl;
+    return 0;
+}
+```
+
+## Map
+
+标准的STL Map是以红黑树为底层机制完成的，每一个节点的内容是pair。
+
+### 方法
+
+```c++
+map<int, int> sample;
+
+// 迭代器
+sample.begin();
+sample.end();
+sample.rbegin();
+sample.rend();
+
+sample.clear();
+
+sample.count(pair);
+
+sample.empty();
+
+sample.erase();
+
+sample.find();
+
+sample.insert();
+
+sample.swap();
+
+sample.size();
+```
+
+### 样例
+
+```c++
+#include <iostream>
+#include <string>
+#include <map>
+using namespace std;
+
+int main(){
+    map<string, int> strMap;
+    strMap["jjhou"] = 1;
+    strMap["jerry"] = 2;
+    strMap["jason"] = 3;
+    strMap["jimmy"] = 4;
+
+    pair<string, int> value("david", 5);
+    strMap.insert(value);
+
+    map<string int>::iterator strmap_iter = strMap.begin();
+    for(;strmap_iter != strMap.end(); strmap_iter++){
+        cout << strmap_iter->first << " " << strmap_iter->second << endl;
+    }
+    cout << endl;
+
+    int number = strMap["jjhou"];
+    cout << number << endl;
+    
+    map<string, int>::iterator iter1;
+    iter1 = strMap.find("mchen");
+    if(iter1 == strMap.end()){
+        cout << "mchen no found" << endl;
+    }
+    cout << endl;
+
+    iter1 = strMap.find("jerry");
+    if(iter1 != strMap.end()){
+        cout << "jerry found" << endl;
+    }
+    cout << endl;
+
+    iter1->second = 9;
+    int number1 = strMap["jerry"];
+    cout << number1 << endl;
+
+    map<string, int>::iterator strmap_iter1 = strMap.begin();
+    for(;strmap_iter1 != strMap.end(); strmap_iter1++){
+        cout << strmap_iter1->first << " " << strmap_iter1->second << endl;
+    }
+    cout << endl;
+
+    strMap.erase(iter1);
+    strMap.erase("jason");
+
+    map<string, int>::iterator strmap_iter2 = strMap.begin();
+    for(;strmap_iter2 != strMap.end(); strmap_iter2++){
+        cout << strmap_iter2->first << " " << strmap_iter2->second << endl;
+    }
     return 0;
 }
 ```

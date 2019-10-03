@@ -1,23 +1,27 @@
+```c++
 #include <iostream>
-#include <set>
 using namespace std;
 
-int main(){
-    set<int> s;
-    s.insert(1);
-    s.insert(2);
-    s.insert(3);
-    s.insert(1);
-    cout << s.size() << endl;
-    cout << s.max_size() << endl;
-    cout << *s.begin() << endl;
-    cout << *s.end() << endl;
-
-    for(set<int>::iterator i = s.begin(); i!=s.end(); i++){
-        cout << *i << " ";
+void SelectSort(int *a, size_t n){
+    int begin = 0;
+    int end = n-1;
+    while(begin < end){
+        int minvalueIndex = begin;
+        int maxvalueIndex = begin;
+        for(size_t i=begin; i<=end; i++){
+            if(a[minvalueIndex] > a[i])
+                minvalueIndex = i;
+            if(a[maxvalueIndex] < a[i])
+                maxvalueIndex = i;
+        }
+        int temp1 = a[begin];
+        int temp2 = a[end];
+        a[begin] = a[minvalueIndex];
+        a[end] = a[maxvalueIndex];
+        a[minvalueIndex] = temp1;
+        a[maxvalueIndex] = temp2;
+        begin++;
+        end--;
     }
-    cout << endl;
-
-    s.clear();
-    return 0;
 }
+```
