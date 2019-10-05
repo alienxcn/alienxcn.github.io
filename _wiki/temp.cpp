@@ -1,26 +1,22 @@
 ```c++
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
-void SelectSort(int *a, size_t n){
-    int begin = 0;
-    int end = n-1;
-    while(begin < end){
-        int minvalueIndex = begin;
-        int maxvalueIndex = begin;
-        for(size_t i=begin; i<=end; i++){
-            if(a[minvalueIndex] > a[i])
-                minvalueIndex = i;
-            if(a[maxvalueIndex] < a[i])
-                maxvalueIndex = i;
+void BubbleSort(int *a, size_t n){
+    size_t end = n;
+    int exchange = 0;
+    while(end > 0){
+        for(int i=1; i<end; i++){
+            if(a[i-1] > a[i]){
+                swap(a[i-1], a[i]);
+                exchange = 1;
+            }
         }
-        int temp1 = a[begin];
-        int temp2 = a[end];
-        a[begin] = a[minvalueIndex];
-        a[end] = a[maxvalueIndex];
-        a[minvalueIndex] = temp1;
-        a[maxvalueIndex] = temp2;
-        begin++;
+        // exchange等于0表明数组本身已经是升序，所以程序结束。
+        if(exchange == 0){
+            break;
+        }
         end--;
     }
 }

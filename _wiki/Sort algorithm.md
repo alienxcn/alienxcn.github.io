@@ -114,3 +114,82 @@ void SelectSort(int *a, size_t n){
     }
 }
 ```
+
+## 堆排序
+
+![](/images/WiKi/wiki4.png)
+
+思路：将数组转变为最大堆（或最小堆），然后将堆顶元素交换到数组最后一位，重复该操作。注意，升序排序的时候使用最大堆，降序排序的时候使用最小堆。
+
+图中左上方的4步操作是将数组转变为最大堆，建立堆的基本操作就像是泡泡浮出水面一样，最大值往堆顶移动。图中右下方是将堆顶交换到数组的最后一位，然后维护最大堆的性质，不断重复，使得堆变小直到所有值排序完毕。
+
+```c++
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+void AdjustDown(int *A, int root, size_t n){
+    int parent = root;
+    int leftChild = parent * 2 + 1;
+    int rightChild = leftChild + 1;
+    int temp = leftChild;
+    while(temp < n){
+        if(rightChild < n && A[rightChild] > A[leftChild]){
+            temp = rightChild;
+        }
+        if(A[temp] > A[parent]){
+            swap(A[temp], A[parent]);
+            parent = temp;
+            temp = parent * 2 + 1;
+            leftChild = temp;
+            rightChild = temp + 1;
+        } else {
+            break;
+        }
+    }
+}
+
+void heapSort(int* A, size_t n){
+    // 建堆
+    for(int i=(n-2)/2; i>=0; i--){
+        AdjustDown(A, i, n);
+    }
+    // 排序
+    int end = n - 1;
+    while(end > 0){
+        swap(A[0], A[end]);
+        AdjustDown(A, 0, end);
+        end--;
+    }
+}
+```
+
+## 冒泡排序
+
+![](/images/WiKi/wiki5.png)
+
+思路：遍历数组，每每两个相邻元素比较，按照升序或者降序规则调换位置，重复数组长度次直到所有元素排序完毕。
+
+```c++
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+void BubbleSort(int *a, size_t n){
+    size_t end = n;
+    int exchange = 0;
+    while(end > 0){
+        for(int i=1; i<end; i++){
+            if(a[i-1] > a[i]){
+                swap(a[i-1], a[i]);
+                exchange = 1;
+            }
+        }
+        // exchange等于0表明数组本身已经是升序，所以程序结束。
+        if(exchange == 0){
+            break;
+        }
+        end--;
+    }
+}
+```
