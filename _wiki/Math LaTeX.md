@@ -25,6 +25,18 @@ S_n &= a1\times \frac{1-q^n}{1-q} &q\not=1
 \end{aligned}
 ```
 
+$$\begin{equation}D(x) = \begin{cases}1, & \\0, &\end{cases}\end{equation}$$
+
+```
+\begin{equation}
+D(x) = 
+\begin{cases}
+1, & \\
+0, &
+\end{cases}
+\end{equation}
+```
+
 ## 求和、乘积
 
 $$\begin{equation}\sum_{i=1}^ni=\frac{n(n-1)}{2}\end{equation}$$
