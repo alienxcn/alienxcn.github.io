@@ -21,11 +21,11 @@ permalink: /about/
 - 西安电子科技大学 网络与信息安全学院
     - 网络空间安全 工学硕士 <code style="color:#c7254e;background-color:#f9f2f4;">在读</code>
 
-## 科研
+## 兴趣
 
 - PCAP Analysis Basics
 - <code style="color:#c7254e;background-color:#f9f2f4;">Cryptography</code> Batch Authentication Protocol
-- Blockchain and Ethereum
+- MAVLink Protocol
 
 ## 经历
 
@@ -33,6 +33,8 @@ permalink: /about/
     - 中国南方航空公司 电子商务部 实习生。
 - 2017年10月-2018年09月：
     - 广东省建设信息中心 总工室 实习生。
+- 2020年06月-2020年08月：
+    - 阿里巴巴集团蚂蚁金服 网商银行 实习生。
 
 
 <!--
