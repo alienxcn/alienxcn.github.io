@@ -2,7 +2,7 @@
 layout: page
 title: 简要
 description: 守正出奇
-keywords: 晓鹿, 小神先生
+keywords: 晓鹿, 晓鹿
 comments: false
 menu: 关于
 permalink: /about/

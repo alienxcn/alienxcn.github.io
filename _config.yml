@@ -4,10 +4,10 @@
 baseurl:
 url: https://blog.alienx.cn
 date_format: "ordinal"
-title: 小神先生
+title: 晓鹿
 subtitle: "守正出奇"
-description: "小神先生的个人博客"
-keywords: 网络空间安全, 小神先生, alienx
+description: "晓鹿的个人博客"
+keywords: 网络空间安全, 晓鹿, alienx
 timezone: Asia/Shanghai
 encoding: "utf-8"
 side_bar_repo_limit: 5
