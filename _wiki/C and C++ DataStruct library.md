@@ -8,7 +8,7 @@ keywords: 链表, 队列, 容器
 
 这里主要收集在C/C++语言下常用数据结构库的用法，例如队列、容器、字符串、集合、映射等。
 
-![](/images/ALGO/M5.png)
+![](https://alienx.oss-cn-shenzhen.aliyuncs.com/images/ALGO/M5.png)
 
 ## Stack
 

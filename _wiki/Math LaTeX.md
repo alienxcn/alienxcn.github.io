@@ -9,10 +9,10 @@ keywords: 链表, 队列, 容器
 LaTeX常用公式表
 
 <script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  src="https://alienx.oss-cn-shenzhen.aliyuncs.com/js/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-![](/images/ALGO/M7.png)
+![](https://alienx.oss-cn-shenzhen.aliyuncs.com/images/ALGO/M7.png)
 
 ## 多行公式
 

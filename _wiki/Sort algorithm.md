@@ -9,10 +9,10 @@ keywords: 链表, 队列, 容器
 常用的排序算法的C++实现，并总结算法的时空复杂度。
 
 <script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  src="https://alienx.oss-cn-shenzhen.aliyuncs.com/js/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-![](/images/ALGO/M2.png)
+![](https://alienx.oss-cn-shenzhen.aliyuncs.com/images/ALGO/M2.png)
 
 ## 常见的排序算法的时空复杂度
 
@@ -27,7 +27,7 @@ keywords: 链表, 队列, 容器
 
 ## 插入排序
 
-![](/images/WiKi/wiki1.png)
+![](https://alienx.oss-cn-shenzhen.aliyuncs.com/images/WiKi/wiki1.png)
 
 思路：待排序的元素（红色）左区域（橙色）是已经排序好的元素，右区域（蓝色）是等候排序的元素，重复遍历左区域找到合适的位置插入。
 
@@ -54,7 +54,7 @@ void InsertSort(int *a, size_t n){
 
 ## 希尔排序
 
-![](/images/WiKi/wiki2.png)
+![](https://alienx.oss-cn-shenzhen.aliyuncs.com/images/WiKi/wiki2.png)
 
 思路：希尔排序维护一个gap，将原数组分成gap份，对每份数组执行插入排序算法，然后减少gap值并重复上述操作，直至gap等于1。其中gap满足：
 
@@ -83,7 +83,7 @@ void ShellSort(int *a, size_t n){
 
 ## 选择排序
 
-![](/images/WiKi/wiki3.png)
+![](https://alienx.oss-cn-shenzhen.aliyuncs.com/images/WiKi/wiki3.png)
 
 思路：不断遍历数组找出其最小值和最大值，将最小值交换到数组最前端，将最大值交换到数组最后端，重复操作。
 
@@ -117,7 +117,7 @@ void SelectSort(int *a, size_t n){
 
 ## 堆排序
 
-![](/images/WiKi/wiki4.png)
+![](https://alienx.oss-cn-shenzhen.aliyuncs.com/images/WiKi/wiki4.png)
 
 思路：将数组转变为最大堆（或最小堆），然后将堆顶元素交换到数组最后一位，重复该操作。注意，升序排序的时候使用最大堆，降序排序的时候使用最小堆。
 
@@ -166,7 +166,7 @@ void heapSort(int* A, size_t n){
 
 ## 冒泡排序
 
-![](/images/WiKi/wiki5.png)
+![](https://alienx.oss-cn-shenzhen.aliyuncs.com/images/WiKi/wiki5.png)
 
 思路：遍历数组，每每两个相邻元素比较，按照升序或者降序规则调换位置，重复数组长度次直到所有元素排序完毕。
 
