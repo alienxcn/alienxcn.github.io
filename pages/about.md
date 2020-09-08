@@ -10,23 +10,24 @@ permalink: /about/
 
 ## whois
 
-我叫晓鹿，广东顺德人。
+我叫晓鹿，来自广东顺德，网络安全工程师。
 
 遵循「知行合一，守正出奇」的原则。
 
-## 学历
+## 学历背景
 
-- 华南师范大学 本科
-- 西安电子科技大学 硕士研究生 <code style="color:#c7254e;background-color:#f9f2f4;">在读</code>
+- 华南师范大学 / 本科 / 网络工程
+- 西安电子科技大学 / 硕士研究生 / 网络空间安全 <code style="color:#c7254e;background-color:#f9f2f4;">在读</code>
 
-## 兴趣
+## 技术方向
 
+- <code style="color:#c7254e;background-color:#f9f2f4;">Cryptography</code>
 - PCAP Analysis Basics
-- <code style="color:#c7254e;background-color:#f9f2f4;">Cryptography</code> Batch Authentication Protocol
-- MAVLink Protocol
+- Batch Authentication Protocol
+- Security for MAVLink Protocol
 - Financial Technology
 
-## 经历
+## 工作经历
 
 - 2017年07月-2017年08月：
     - 中国南方航空公司 实习生。
@@ -34,6 +35,12 @@ permalink: /about/
     - 广东省建设信息中心 实习生。
 - 2020年06月-2020年08月：
     - 蚂蚁金融服务集团 实习生。
+
+## 博客更新
+
+1. V2020-01-15：启用MathJax渲染页面数学公式。
+2. V2020-08-15：博客标识由 [小神先生] 更名到 [晓鹿]。
+3. V2020-09-08：启用阿里云OSS加载文章内所有images。
 
 
 <!--
