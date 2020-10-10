@@ -9,7 +9,7 @@ keywords: 链表, 队列, 容器
 常用的排序算法的C++实现，并总结算法的时空复杂度。
 
 <script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  src="https://lib.baomitu.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
 ![](https://alienx.oss-cn-shenzhen.aliyuncs.com/images/ALGO/M2.png)
