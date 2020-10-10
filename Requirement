@@ -1,0 +1,10 @@
+在本地运行时首次需要配置环境：其中gemfile.lock已经调整到清华大学的源。
+
+bundle update github-pages
+bundle install
+
+修改gemfile.lock后需要
+bundle update
+
+建议执行
+bundle exec jekyll serve
