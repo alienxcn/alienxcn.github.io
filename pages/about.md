@@ -17,15 +17,14 @@ permalink: /about/
 ## 学历背景
 
 - 华南师范大学 / 本科 / 网络工程
-- 西安电子科技大学 / 硕士研究生 / 网络空间安全 <code style="color:#c7254e;background-color:#f9f2f4;">在读</code>
+- 西安电子科技大学 / 硕士研究生 / 网络空间安全 
 
 ## 技术方向
 
-- <code style="color:#c7254e;background-color:#f9f2f4;">Cryptography</code>
-- PCAP Analysis Basics
+- <code style="color:#c7254e;background-color:#f9f2f4;">Homomorphic Encryption</code>
+- Privacy Computing
 - Batch Authentication Protocol
-- Security for MAVLink Protocol
-- Financial Technology
+- Network Analysis
 
 ## 工作经历
 
@@ -35,6 +34,8 @@ permalink: /about/
     - 广东省建设信息中心 实习生。
 - 2020年06月-2020年08月：
     - 蚂蚁金融服务集团 实习生。
+- 2021年07月-至今：
+    - 网商银行 安全工程师。
 
 ## 博客更新
 
@@ -43,6 +44,9 @@ permalink: /about/
 3. V2020-09-08：启用阿里云OSS加载文章内所有images。
 4. V2020-10-10：MathJax组件从cloudflare的CDN切换到360公司的CDN服务，使得文章载入数学公式的速度更快了。
 
+## 联系方式
+
+- me@alienx.cn
 
 <!--
 {% for website in site.data.social %}
